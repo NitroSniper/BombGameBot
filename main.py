@@ -38,7 +38,9 @@ def main():
             print ("Joined and Seating")
             print (driver.find_element(By.CLASS_NAME, 'syllable').text)
             # print(driver.execute_script('return milestone.playerStatesByPeerId[milestone.currentPlayerPeerId]'))
-            print (driver.execute_script('return JSON.stringify(players[0], null, 4)'))
+            #print (driver.execute_script('return JSON.stringify(players[0], null, 4)'))
+            print (driver.execute_script('return milestone.playerStatesByPeerId'))
+            print (driver.execute_script('return selfPeerId'))
 
         time.sleep(1)
     input("Press enter to continue...")
